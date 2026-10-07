@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ page.title | escape }} | Oryiman Ayaka</title>
+<meta name="description" content="{{ page.description | default: site.description | escape }}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F6F7F5;--ink:#14231F;--muted:#55665F;--line:#C9D2CE;--accent:#0F5C4D;--deep:#0F3D38;--onDeep:#EEF4F1;--focus:#E0A100}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:20px/1.75 "Newsreader",Georgia,serif}
+a{color:var(--accent);text-underline-offset:.2em}
+a:focus-visible{outline:3px solid var(--focus);outline-offset:3px}
+.wrap{max-width:68rem;margin:0 auto;padding:0 1.25rem}
+.ui,header,h1,h2,h3,.btn{font-family:"Hanken Grotesk",system-ui,sans-serif}
+header{position:sticky;top:0;z-index:5;background:var(--deep);color:var(--onDeep)}
+header .wrap{display:flex;justify-content:space-between;align-items:center;gap:.5rem 1.5rem;flex-wrap:wrap;padding-top:.8rem;padding-bottom:.8rem}
+.mono{font-weight:700;font-size:1.15rem;letter-spacing:.02em;color:var(--onDeep);text-decoration:none}
+nav a{color:var(--onDeep);text-decoration:none;font-size:.95rem;margin-left:1.25rem}
+nav a:hover{text-decoration:underline}
+article{max-width:40rem;margin:0 auto;padding:3rem 1.25rem 2rem}
+.date{font-size:.9rem;color:var(--muted);margin:0 0 .75rem}
+h1{font-size:clamp(2rem,6vw,3.2rem);line-height:1.1;font-weight:700;letter-spacing:-.015em;margin:0 0 2rem}
+article h2{font-size:1.7rem;line-height:1.2;margin:2.5rem 0 .75rem}
+article h3{font-size:1.3rem;margin:2rem 0 .5rem}
+article p,article ul,article ol{margin:0 0 1.35rem}
+article blockquote{margin:2rem 0;padding:.1rem 0 .1rem 1.25rem;border-left:4px solid var(--accent);font-style:italic;color:var(--muted)}
+article img{max-width:100%;height:auto}
+.cta{max-width:40rem;margin:1rem auto 0;padding:2rem 1.25rem 0}
+.cta>div{border-top:1px solid var(--line);padding-top:1.75rem}
+.cta p{margin:0 0 1rem;font-size:1.05rem}
+.btn{display:inline-block;font-weight:600;font-size:1rem;text-decoration:none;padding:.8rem 1.4rem;border-radius:4px;margin:0 .6rem .6rem 0;background:var(--accent);color:#fff}
+.btn.alt{background:transparent;border:2px solid var(--accent);color:var(--accent)}
+.back{max-width:40rem;margin:1.5rem auto 0;padding:0 1.25rem;font-size:.95rem}
+footer{padding:2rem 0 3rem;color:var(--muted);font-size:.9rem}
+footer p{margin:0}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a class="mono" href="{{ '/' | relative_url }}" aria-label="Oryiman Ayaka, home">OA</a>
+    <nav aria-label="Main">
+      <a href="{{ '/' | relative_url }}#pieces">What I write</a>
+      <a href="{{ '/' | relative_url }}#essays">Essays</a>
+      <a href="{{ '/' | relative_url }}#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <article>
+    <p class="date ui">{{ page.date | date: "%B %-d, %Y" }}</p>
+    <h1>{{ page.title }}</h1>
+    {{ content }}
+  </article>
+
+  <div class="cta">
+    <div>
+      <p class="ui">Enjoyed this? Get more in my newsletter, or tell me what you need written.</p>
+      <a class="btn" href="{{ site.newsletter_url }}">Read The Hidden Logic</a>
+      <a class="btn alt" href="{{ '/' | relative_url }}#contact">Start a project</a>
+    </div>
+  </div>
+
+  <p class="back ui"><a href="{{ '/' | relative_url }}#essays">&larr; All essays</a></p>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>&copy; 2026 Oryiman Ayaka</p>
+  </div>
+</footer>
+
+</body>
+</html>
