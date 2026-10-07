@@ -1,0 +1,267 @@
+---
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Oryiman Ayaka | Ghostwriter</title>
+<meta name="description" content="Oryiman Ayaka ghostwrites articles, posts, newsletters, speeches and more for founders, executives and experts.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700&family=Newsreader:opsz,wght@6..72,400;6..72,600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F6F7F5;--ink:#14231F;--muted:#55665F;--line:#C9D2CE;--accent:#0F5C4D;--deep:#0F3D38;--deep2:#1B5A52;--onDeep:#EEF4F1;--amber:#E8B230;--focus:#E0A100}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:4.5rem}
+body{margin:0;background:var(--bg);color:var(--ink);font:18px/1.65 "Newsreader",Georgia,serif}
+a{color:var(--accent);text-underline-offset:.2em}
+a:focus-visible,.btn:focus-visible{outline:3px solid var(--focus);outline-offset:3px}
+.wrap{max-width:68rem;margin:0 auto;padding:0 1.25rem}
+.ui,header,h1,h2,h3,.btn{font-family:"Hanken Grotesk",system-ui,sans-serif}
+
+header{position:sticky;top:0;z-index:5;background:var(--deep);color:var(--onDeep)}
+header .wrap{display:flex;justify-content:space-between;align-items:center;gap:.5rem 1.5rem;flex-wrap:wrap;padding-top:.8rem;padding-bottom:.8rem}
+.mono{font-weight:700;font-size:1.15rem;letter-spacing:.02em;color:var(--onDeep);text-decoration:none}
+nav a{color:var(--onDeep);text-decoration:none;font-size:.95rem;margin-left:1.25rem}
+nav a:hover{text-decoration:underline}
+
+.hero{background:var(--deep);color:var(--onDeep);padding:3.5rem 0 4rem}
+.hero .wrap{display:grid;grid-template-columns:1.25fr .75fr;gap:2.5rem 3.5rem;align-items:center}
+h1{font-size:clamp(2.4rem,6.5vw,4.4rem);line-height:1.04;font-weight:700;letter-spacing:-.02em;margin:0 0 1.1rem}
+.hero p{font-size:1.3rem;max-width:31rem;margin:0 0 2rem;color:#D3E2DC}
+.btn{display:inline-block;font-weight:600;font-size:1rem;text-decoration:none;padding:.8rem 1.4rem;border-radius:4px;margin:0 .6rem .6rem 0}
+.btn.main{background:var(--amber);color:#1A1A12}
+.btn.alt{border:2px solid #7FA79D;color:var(--onDeep)}
+.btn.dark{background:var(--accent);color:#fff}
+.btn:hover{filter:brightness(1.1)}
+.portrait{position:relative;aspect-ratio:4/5;background:var(--deep2);border-radius:6px;overflow:hidden;display:grid;place-items:center;font:700 4rem "Hanken Grotesk",sans-serif;color:#7FA79D}
+.portrait img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+
+section.block{padding:4rem 0;border-bottom:1px solid var(--line)}
+h2{font-size:clamp(1.7rem,4vw,2.4rem);line-height:1.15;font-weight:700;letter-spacing:-.01em;margin:0 0 1.25rem}
+.lead{max-width:40rem}
+.lead p{margin:0 0 1rem}
+
+.pieces{display:grid;grid-template-columns:repeat(3,1fr);gap:2.25rem 2rem;margin-top:1.5rem}
+.pieces>div{border-top:3px solid var(--accent);padding-top:1rem}
+.pieces h3{font-size:1.2rem;margin:0 0 .4rem}
+.pieces p{margin:0;font-size:1rem}
+.note{color:var(--muted);font-size:.95rem;margin-top:1.75rem}
+.legal{margin-top:3rem;background:var(--deep);color:var(--onDeep);border-radius:6px;padding:2.25rem;display:grid;grid-template-columns:1fr 1.2fr;gap:1.5rem 3rem}
+.legal h3{font-size:1.7rem;margin:0 0 .6rem}
+.legal p{margin:0 0 1rem;color:#D3E2DC}
+.legal .fine{font-size:.9rem;color:#A9C2B9;margin:0}
+.legal ul{margin:0;padding-left:1.1rem}
+.legal li{margin:0 0 .6rem}
+.posts{list-style:none;margin:0;padding:0;max-width:42rem}
+.posts li{padding:0 0 1.5rem;margin:0 0 1.5rem;border-bottom:1px solid var(--line)}
+.posts li:last-child{border:0;margin:0;padding:0}
+.posts .meta{display:block;font-size:.85rem;color:var(--muted);margin-bottom:.2rem}
+.posts a{font:700 1.4rem/1.3 "Hanken Grotesk",sans-serif}
+.posts p{margin:.4rem 0 0;color:var(--muted);font-size:1rem}
+
+.steps{list-style:none;margin:1.5rem 0 0;padding:0;max-width:40rem;counter-reset:s}
+.steps li{counter-increment:s;position:relative;padding:0 0 1.25rem 3rem}
+.steps li::before{content:counter(s);position:absolute;left:0;top:.05rem;width:2rem;height:2rem;border-radius:50%;background:var(--accent);color:#fff;font:700 .95rem/2rem "Hanken Grotesk",sans-serif;text-align:center}
+.steps h3{font-size:1.1rem;margin:0 0 .15rem}
+.steps p{margin:0;font-size:1rem;color:var(--muted)}
+
+.cband{background:var(--deep);color:var(--onDeep);padding:3.5rem 0 3rem}
+.cband h2{color:var(--onDeep);margin:0 0 1rem}
+.cband p{margin:0 0 .4rem;font-size:1.1rem;max-width:36rem}
+.cband .k{text-transform:uppercase;font-size:.9rem;letter-spacing:.06em;color:#A9C2B9}
+.cband a{color:var(--onDeep);font-size:1.25rem}
+.cform{background:#E3EBE7;padding:3rem 0 4rem}
+form{max-width:44rem}
+.f{margin:0 0 2rem}
+.f label{display:block;font:600 .85rem "Hanken Grotesk",sans-serif;text-transform:uppercase;letter-spacing:.06em;margin-bottom:.2rem}
+.f input,.f textarea{display:block;width:100%;border:0;border-bottom:2px solid var(--ink);border-radius:0;background:transparent;font:1.1rem "Hanken Grotesk",sans-serif;color:var(--ink);padding:.7rem .25rem}
+.f textarea{min-height:7rem;resize:vertical}
+.f input::placeholder,.f textarea::placeholder{color:#6B7F76}
+.f input:focus-visible,.f textarea:focus-visible{outline:none;border-bottom-color:var(--accent);box-shadow:0 2px 0 var(--accent)}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:0 2rem}
+.send{width:100%;border:0;border-radius:999px;background:var(--deep);color:var(--onDeep);font:600 1rem "Hanken Grotesk",sans-serif;text-transform:uppercase;letter-spacing:.06em;padding:1.1rem;cursor:pointer}
+.send:hover{filter:brightness(1.25)}
+.send:focus-visible{outline:3px solid var(--focus);outline-offset:3px}
+.hp{position:absolute;left:-9999px}
+
+footer{padding:1.75rem 0 3rem;color:var(--muted);font-size:.9rem}
+footer p{margin:0}
+
+@media(max-width:760px){
+  .hero{padding:2.5rem 0 3rem}
+  .hero .wrap{grid-template-columns:1fr}
+  .portrait{max-width:20rem}
+  .pieces{grid-template-columns:1fr}
+  .legal{grid-template-columns:1fr;padding:1.5rem}
+  .row{grid-template-columns:1fr}
+  nav a{margin:0 1rem 0 0}
+  section.block{padding:3rem 0}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a class="mono" href="#top" aria-label="Oryiman Ayaka, home">OA</a>
+    <nav aria-label="Main">
+      <a href="#about">About</a>
+      <a href="#pieces">What I write</a>
+      <a href="#essays">Essays</a>
+      <a href="#process">How it works</a>
+      <a href="#newsletter">Newsletter</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <div class="hero">
+    <div class="wrap">
+      <div>
+        <h1>Hi, I'm Oryiman Ayaka.</h1>
+        <p>I ghostwrite articles, posts, newsletters and speeches for people with something to say and no time to write it.</p>
+        <a class="btn main" href="#contact">Start a project</a>
+        <a class="btn alt" href="#pieces">See what I write</a>
+      </div>
+      <!-- Save your photo as photo.jpg in the same folder. Until then, initials show. -->
+      <div class="portrait" aria-label="Portrait of Oryiman Ayaka">OA<img src="photo.jpg" alt="Oryiman Ayaka" onerror="this.remove()"></div>
+    </div>
+  </div>
+
+  <section class="block" id="about">
+    <div class="wrap lead">
+      <h2>About me</h2>
+      <p>I turn your ideas, notes and conversations into finished writing that sounds like you. You bring the expertise and the opinions. I bring the structure, the sentences and the deadline discipline.</p>
+      <p>You are the author. Your name goes on the work, I stay unnamed, and everything we discuss stays confidential.</p>
+    </div>
+  </section>
+
+  <section class="block" id="pieces">
+    <div class="wrap">
+      <h2>What I write</h2>
+      <div class="pieces">
+        <div>
+          <h3>Social posts</h3>
+          <p>LinkedIn posts, X threads and post series, written to build a steady voice and presence.</p>
+        </div>
+        <div>
+          <h3>Articles and essays</h3>
+          <p>Op-eds, thought-leadership articles, blog posts, long-form essays and explainers.</p>
+        </div>
+        <div>
+          <h3>Newsletters</h3>
+          <p>Regular issues in your voice, from one-off editions to a full weekly or monthly schedule.</p>
+        </div>
+        <div>
+          <h3>Business writing</h3>
+          <p>Case studies, white papers, reports, press releases, company bios and website copy.</p>
+        </div>
+        <div>
+          <h3>Speeches and scripts</h3>
+          <p>Keynotes, remarks, talking points, and scripts for video, podcasts and short-form content.</p>
+        </div>
+        <div>
+          <h3>Long-form projects</h3>
+          <p>Ebooks, guides and book chapters, planned and drafted over several weeks.</p>
+        </div>
+      </div>
+      <div class="legal" id="legal">
+        <div>
+          <h3>Legal writing</h3>
+          <p>Clear, accurate writing for lawyers, law firms, compliance teams and the companies that rely on them.</p>
+          <p class="fine">Content and research only. I do not give legal advice or draft contracts, and you review every piece before it goes out.</p>
+        </div>
+        <ul>
+          <li>Client alerts and legal updates on new laws and regulations</li>
+          <li>Plain-English explainers of statutes, circulars and court decisions</li>
+          <li>Articles and blog posts that build a lawyer's or firm's profile</li>
+          <li>Newsletters and regulatory trackers for compliance teams</li>
+          <li>Policy briefs and research papers</li>
+          <li>Practice-area pages, firm profiles and lawyer bios</li>
+        </ul>
+      </div>
+      <p class="note ui">Have something that isn't on the list? <a href="#contact">Ask me.</a> Every project has a fixed scope and price, or a monthly retainer for ongoing work.</p>
+    </div>
+  </section>
+
+  <section class="block" id="essays">
+    <div class="wrap">
+      <h2>Essays</h2>
+      {% if site.posts.size > 0 %}
+      <ul class="posts">
+        {% for post in site.posts limit:6 %}
+        <li>
+          <span class="meta ui">{{ post.date | date: "%B %Y" }}</span>
+          <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+          {% if post.description %}<p>{{ post.description }}</p>{% endif %}
+        </li>
+        {% endfor %}
+      </ul>
+      {% else %}
+      <p class="lead">My first essays are on the way. In the meantime, <a href="{{ site.newsletter_url }}">read The Hidden Logic</a>.</p>
+      {% endif %}
+    </div>
+  </section>
+
+  <section class="block" id="process">
+    <div class="wrap">
+      <h2>How it works</h2>
+      <ol class="steps">
+        <li><h3>We talk</h3><p>A short call or voice note where you tell me what you want to say, who it is for and how you sound.</p></li>
+        <li><h3>I draft</h3><p>I write the piece in your voice and send it back on the agreed date.</p></li>
+        <li><h3>You review</h3><p>You comment, I revise, and we repeat until it reads exactly as you would say it.</p></li>
+        <li><h3>You publish</h3><p>The piece goes out under your name.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="block" id="newsletter">
+    <div class="wrap lead">
+      <h2>The Hidden Logic</h2>
+      <p>My own newsletter looks at the invisible systems that shape society, from financial systems and colonial history to African self-determination. It is also a good sample of how I write when the voice is my own.</p>
+      <a class="btn dark" href="{{ site.newsletter_url }}">Read The Hidden Logic</a>
+    </div>
+  </section>
+
+  <section id="contact" aria-labelledby="contact-h">
+    <div class="cband">
+      <div class="wrap">
+        <h2 id="contact-h">Contact Me</h2>
+        <p class="ui">Ask me a question or tell me about your project. I reply within two working days.</p>
+        <p class="ui k" style="margin-top:1.5rem">Send me an email:</p>
+        <p class="ui"><a href="mailto:you@example.com">you@example.com</a></p>
+        <p class="ui" style="margin-top:.75rem"><a href="https://www.linkedin.com/in/your-handle" style="font-size:1rem">LinkedIn</a> &nbsp; <a href="https://x.com/your-handle" style="font-size:1rem">X</a></p>
+      </div>
+    </div>
+    <div class="cform">
+      <div class="wrap">
+        <!-- Replace YOUR_FORM_ID with your Formspree form ID (see formspree.io). -->
+        <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+          <input type="hidden" name="_subject" value="New message from your website">
+          <input class="hp" type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <div class="row">
+            <div class="f"><label for="fn">First name *</label><input id="fn" name="first_name" type="text" placeholder="John" autocomplete="given-name" required></div>
+            <div class="f"><label for="ln">Last name *</label><input id="ln" name="last_name" type="text" placeholder="Doe" autocomplete="family-name" required></div>
+          </div>
+          <div class="f"><label for="em">Email *</label><input id="em" name="email" type="email" placeholder="hello@example.com" autocomplete="email" required></div>
+          <div class="f"><label for="msg">Message *</label><textarea id="msg" name="message" placeholder="Type your message here" required></textarea></div>
+          <button class="send" type="submit">Submit</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>&copy; 2026 Oryiman Ayaka</p>
+  </div>
+</footer>
+
+</body>
+</html>
