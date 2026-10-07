@@ -1,0 +1,12 @@
+title: Oryiman Ayaka
+description: Ghostwriter
+timezone: Africa/Lagos
+permalink: /essays/:title/
+newsletter_url: https://example.substack.com
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: essay
